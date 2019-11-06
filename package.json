@@ -26,6 +26,7 @@
     "@pattern-lab/cli": "^5.1.0",
     "@pattern-lab/core": "^5.1.0",
     "@pattern-lab/engine-handlebars": "^5.0.0",
-    "@pattern-lab/uikit-workshop": "^5.0.2"
+    "@pattern-lab/uikit-workshop": "^5.0.2",
+    "fomantic-ui": "^2.7.8"
   }
 }
