@@ -26,37 +26,8 @@
         </div>
       </div>
     </div>
-    {{> templates-hero}}
-    <div class="feature alternate ui vertical segment">
-      <div class="ui three column center aligned inverted divided relaxed stackable grid container">
-        <div class="row">
-          <div class="column" style="
-          height: 150px;
-          display: flex;
-          align-items: center;
-          justify-content: center;">
-            <a class="ui large button" href="/usage/theming.html">产品</a>
-          </div>
-          <div class="column" style="
-          height: 150px;
-          display: flex;
-          align-items: center;
-          justify-content: center;">
-            <div class="ui primary view-ui large button">视频</div>
-          </div>
-          <div class="column" style="
-          height: 150px;
-          display: flex;
-          align-items: center;
-          justify-content: center;">
-            <a href="https://github.com/fomantic/Fomantic-UI/issues" class="ui large button">下载</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- <div class="ui vertical stripe segment">
+    {{> templates-banner}}
+  <div class="ui vertical stripe segment" style="background: white;margin-top: 8em;">
     <div class="ui middle aligned stackable grid container">
       <div class="row">
         <div class="eight wide column">
@@ -79,7 +50,7 @@
   </div>
 
 
-  <div class="ui vertical stripe quote segment">
+  <div class="ui vertical stripe quote segment" style="background: white;">
     <div class="ui equal width stackable internally celled grid">
       <div class="center aligned row">
         <div class="column">
@@ -96,7 +67,7 @@
     </div>
   </div>
 
-  <div class="ui vertical stripe segment">
+  <div class="ui vertical stripe segment" style="background: white;">
     <div class="ui text container">
       <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
       <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing
@@ -111,7 +82,7 @@
         It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
       <a class="ui large button">I'm Still Quite Interested</a>
     </div>
-  </div> -->
+  </div>
   {{> templates-footer}}
 </div>
 <script>
@@ -129,16 +100,6 @@
           }
         })
         ;
-      // create sidebar and attach to menu open
-      $('.ui.sidebar')
-        .sidebar('attach events', '.toc.item')
-        ;
-      $('.slider').glide({
-        autoplay: 4000,
-        hoverpause: false,
-        arrowsWrapperClass: 'slider-arrows',
-        arrowRightText: ''
-      });
     })
     ;
 </script>
