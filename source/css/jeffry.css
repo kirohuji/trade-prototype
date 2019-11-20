@@ -2,138 +2,138 @@
 
 /* glide */
 .slider {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .slides {
-    height: 100%;
-    overflow: hidden;
-    *zoom: 1;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform-style: preserve-3d;
+  height: 100%;
+  overflow: hidden;
+  *zoom: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
 }
 
 .slide-item {
-    height: 100%;
-    float: left;
-    clear: none;
+  height: 100%;
+  float: left;
+  clear: none;
 }
 
 .slider-arrow {
-    position: absolute;
-    display: block;
-    margin-bottom: -20px;
-    padding: 20px;
+  position: absolute;
+  display: block;
+  margin-bottom: -20px;
+  padding: 20px;
 }
 
 .slider-arrow--right {
-    bottom: 50%;
-    right: 30px;
+  bottom: 50%;
+  right: 30px;
 }
 
 .slider-arrow--left {
-    bottom: 50%;
-    left: 30px;
+  bottom: 50%;
+  left: 30px;
 }
 
 .slider-nav {
-    position: absolute;
-    bottom: 50px;
+  position: absolute;
+  bottom: 50px;
 }
 
 .slider-nav__item {
-    width: 12px;
-    height: 12px;
-    float: left;
-    clear: none;
-    display: block;
-    margin: 0 5px;
-    background: #fff;
+  width: 12px;
+  height: 12px;
+  float: left;
+  clear: none;
+  display: block;
+  margin: 0 5px;
+  background: #fff;
 }
 
 .slider-nav__item:hover {
-    background: #ccc;
+  background: #ccc;
 }
 
 .slider-nav__item--current {
-    background: #ccc;
+  background: #ccc;
 }
 
 /* unique slider css */
 .slider-nav__item {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .slider-arrow--right,
 .slider-arrow--left {
-    background-image: url('../images/glide-arrows.png');
-    background-repeat: no-repeat;
-    width: 17px;
-    height: 28px;
-    display: block;
-    padding: 0;
+  background-image: url('../images/glide-arrows.png');
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 28px;
+  display: block;
+  padding: 0;
 }
 
 .slider-arrow--right {
-    background-position: -17px 0;
+  background-position: -17px 0;
 }
 
 .slider-arrow--left {}
 
 /* home page slider - start */
 .slider1 .slide-item {
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
 .slider1 .item1 {
-    background: url("../images/dream1.jpg") no-repeat center;
+  background: url("../images/dream1.jpg") no-repeat center;
 }
 
 .slider1 .item2 {
-    background: url("../images/dream2.jpg") no-repeat center;
+  background: url("../images/dream2.jpg") no-repeat center;
 }
 
 .slider1 .item3 {
-    background: url("../images/dream3.jpg") no-repeat center;
+  background: url("../images/dream3.jpg") no-repeat center;
 }
 
 .slider1 .item4 {
-    background: url("../images/dream4.jpg") no-repeat center;
+  background: url("../images/dream4.jpg") no-repeat center;
 }
 
 .slider1 {
-    color: #fff;
+  color: #fff;
 }
 
 .slider1 .content {
-    margin-top: 37%;
-    margin-bottom: 20%;
+  margin-top: 37%;
+  margin-bottom: 20%;
 }
 
 .slider1 h2 {
-    font-family: 'lobster', sans-serif;
-    font-size: 5em;
-    font-weight: 200;
-    margin-bottom: 1.2em;
-    text-shadow: 0 .05em .05em #c25b1d !important;
+  font-family: 'lobster', sans-serif;
+  font-size: 5em;
+  font-weight: 200;
+  margin-bottom: 1.2em;
+  text-shadow: 0 .05em .05em #c25b1d !important;
 }
 
 .slider1 .note {
-    max-height: 5em;
-    min-height: 5em;
-    max-width: 5em;
-    min-width: 5em;
-    display: inline !important;
+  max-height: 5em;
+  min-height: 5em;
+  max-width: 5em;
+  min-width: 5em;
+  display: inline !important;
 }
 
 .sidebar.menu.active {
-    padding-bottom: 2em;
+  padding-bottom: 2em;
 }
 
 
@@ -141,92 +141,204 @@
 @media only screen and (max-width : 1200px) {}
 
 @media only screen and (max-width : 992px) {
-    .ui.vertical.menu {
-        width: 100%;
-    }
+  .ui.vertical.menu {
+    width: 100%;
+  }
 
-    .stuck {
-        position: relative;
-    }
+  .stuck {
+    position: relative;
+  }
 
-    .slider2 .content,
-    .slider3 .content {
-        padding-left: 12% !important;
-        padding-right: 12% !important;
-    }
+  .slider2 .content,
+  .slider3 .content {
+    padding-left: 12% !important;
+    padding-right: 12% !important;
+  }
 }
 
 @media only screen and (max-width : 768px) {
-    .slider1 h2 {
-        font-size: 2.5em;
-    }
+  .slider1 h2 {
+    font-size: 2.5em;
+  }
 
-    .slider1 .note {
-        max-height: 4em;
-        min-height: 4em;
-        max-width: 4em;
-        min-width: 4em;
-    }
+  .slider1 .note {
+    max-height: 4em;
+    min-height: 4em;
+    max-width: 4em;
+    min-width: 4em;
+  }
 }
 
 @media only screen and (max-width : 480px) {
-    body section {
-        padding: 1em 0;
-    }
+  body section {
+    padding: 1em 0;
+  }
 
-    .slider1 {
-        padding-top: 55px;
-    }
+  .slider1 {
+    padding-top: 55px;
+  }
 
-    .slider1 h2 {
-        font-size: 1.8em;
-    }
+  .slider1 h2 {
+    font-size: 1.8em;
+  }
 
-    .slider1 .note {
-        max-height: 2.8em;
-        min-height: 2.8em;
-        max-width: 2.8em;
-        min-width: 2.8em;
-    }
+  .slider1 .note {
+    max-height: 2.8em;
+    min-height: 2.8em;
+    max-width: 2.8em;
+    min-width: 2.8em;
+  }
 
-    .slider1 .content {
-        margin-top: 30%;
-        margin-bottom: 30%;
-    }
+  .slider1 .content {
+    margin-top: 30%;
+    margin-bottom: 30%;
+  }
 
-    .slider-nav {
-        display: none;
-        visibility: hidden;
-    }
+  .slider-nav {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @media only screen and (max-width : 320px) {
-    body section {
-        padding: 1em 0;
-    }
+  body section {
+    padding: 1em 0;
+  }
 
-    .slider1 {
-        padding-top: 55px;
-    }
+  .slider1 {
+    padding-top: 55px;
+  }
 
-    .slider1 h2 {
-        font-size: 1.8em;
-    }
+  .slider1 h2 {
+    font-size: 1.8em;
+  }
 
-    .slider1 .note {
-        max-height: 2.8em;
-        min-height: 2.8em;
-        max-width: 2.8em;
-        min-width: 2.8em;
-    }
+  .slider1 .note {
+    max-height: 2.8em;
+    min-height: 2.8em;
+    max-width: 2.8em;
+    min-width: 2.8em;
+  }
 
-    .slider-nav {
-        display: none;
-        visibility: hidden;
-    }
+  .slider-nav {
+    display: none;
+    visibility: hidden;
+  }
 
-    .slider1 .content {
-        margin-top: 30%;
-        margin-bottom: 30%;
-    }
+  .slider1 .content {
+    margin-top: 30%;
+    margin-bottom: 30%;
+  }
+}
+
+body,
+input,
+select,
+textarea {
+  color: #777;
+  font-family: "Source Sans Pro", sans-serif !important;
+  font-size: 16pt;
+  font-weight: 300;
+  line-height: 1.65em;
+  letter-spacing: -0.015em;
+}
+
+.hidden.menu {
+  display: none;
+}
+
+.masthead.segment {
+  min-height: 700px;
+  padding: 1em 0em;
+}
+
+.masthead .logo.item img {
+  margin-right: 1em;
+}
+
+.masthead .ui.menu .ui.button {
+  margin-left: 0.5em;
+}
+
+.masthead h1.ui.header {
+  margin-top: 3em;
+  margin-bottom: 0em;
+  font-size: 4em;
+  font-weight: normal;
+}
+
+.masthead h2 {
+  font-size: 1.7em;
+  font-weight: normal;
+}
+
+.ui.vertical.stripe {
+  padding: 8em 0em;
+}
+
+.ui.vertical.stripe h3 {
+  font-size: 2em;
+}
+
+.ui.vertical.stripe .button+h3,
+.ui.vertical.stripe p+h3 {
+  margin-top: 3em;
+}
+
+.ui.vertical.stripe .floated.image {
+  clear: both;
+}
+
+.ui.vertical.stripe p {
+  font-size: 1.33em;
+}
+
+.ui.vertical.stripe .horizontal.divider {
+  margin: 3em 0em;
+}
+
+.quote.stripe.segment {
+  padding: 0em;
+}
+
+.quote.stripe.segment .grid .column {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.footer.segment {
+  padding: 5em 0em;
+}
+
+.secondary.pointing.menu .toc.item {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .ui.fixed.menu {
+    display: none !important;
+  }
+
+  .secondary.pointing.menu .item,
+  .secondary.pointing.menu .menu {
+    display: none;
+  }
+
+  .secondary.pointing.menu .toc.item {
+    display: block;
+  }
+
+  .masthead.segment {
+    min-height: 350px;
+  }
+
+  .masthead h1.ui.header {
+    font-size: 2em;
+    margin-top: 1.5em;
+  }
+
+  .masthead h2 {
+    margin-top: 0.5em;
+    font-size: 1.5em;
+  }
 }
