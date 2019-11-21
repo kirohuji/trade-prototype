@@ -1,0 +1,46 @@
+<style>
+  .carousel__item .carousel__mask {
+    color: #475669;
+    font-size: 14px;
+    opacity: 1;
+    line-height: 200px;
+    margin: 0;
+    background-size: cover;
+    background-image: url("../../images/bg1.jpg");
+  }
+
+  .carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+
+  .carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
+  }
+
+  .carousel__container {
+    text-align: center;
+  }
+</style>
+  <div class="carousel carousel--vertical" style="height: inherit;">
+    <!-- 图标-->
+    <div class="carousel__container" style="height: inherit;">
+      <div class="carousel__arrow carousel__arrow--left" style="display:none">
+        <!-- <div class="nav-next"></div> -->
+      </div>
+      <div class="carousel__arrow carousel__arrow--right" style="display:none">
+        <!-- <div class="nav-previous"></div> -->
+      </div>
+      {{> molecules-carousel-item}}
+    </div>
+    <ul class="carousel__indicators carousel__indicators--vertical">
+      <li class="carousel__indicator carousel__indicator--vertical">
+        <div class="carousel__button" style="background-color: #F44336;"></div>
+      </li>
+      <li class="carousel__indicator carousel__indicator--vertical">
+        <div class="carousel__button"></div>
+      </li>
+      <li class="carousel__indicator carousel__indicator--vertical">
+        <div class="carousel__button"></div>
+      </li>
+    </ul>
+  </div>
