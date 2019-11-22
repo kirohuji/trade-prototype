@@ -1,35 +1,58 @@
-<!-- 全屝居中Banner -->
+<!-- ­Banner -->
 <section id="banner">
   <div style="height: 100%;">
     {{> organisms-carousel}}
   </div>
   <div class="inner">
-    <div style="color: white;display: flex;justify-content: space-around;">
-      <div style="text-align: left;padding-left: 60px;">
-        <p>Residential</p>
-        <div>
+    <div class="ui main container" style="color: white;display: flex;justify-content: space-between;align-items: center;">
+      <div style="text-align: left;">
+        <p>XXXX</p>
+        <header style="margin: 0 0 1.25em 0;">
           <p style="
           font-size: 10vh;
           font-weight: 700;
           line-height: 1.1em;
           letter-spacing: 0em;">
-            House Rectangle
+            XXX XXXX
             <br />
-            In Agoura
+            XX XXXX
           </p>
+        </header>
+        <div class="content">
+          <ul class="actions">
+            <li><a href="#one" class=" button next scrolly" style="box-shadow:none;padding-left:0px;text-transform:none">了解更多</a></li>
+          </ul>
         </div>
-
       </div>
-      <p>
-        Another fine responsive
+      <p style="
+      font-size: 50px;
+      line-height: 2px;
+      padding-bottom: 48px;
+      /* height: 100%; */
+      display: flex;
+      align-items: end;">
+        <span>01</span><span>/</span><span style="font-size: 25px;">03</span>
       </p>
     </div>
   </div>
-  <a href="#one" class="more scrolly" style="
-    position: absolute;
-    bottom: 0;
-    left: 200px;
+  <a href="#one" class="goto-next scrolly" style="
     z-index: 3;
-    font-size: 4vh;">
+    left:14%;
+    font-size: 3vh;">
   </a>
+  {{> molecules-icons}}
+  <div class="cards" style="
+    z-index: 3;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: white;
+    display: flex;
+    justify-content: space-evenly;
+    height: 16vh;">
+    {{> molecules-banner-card}}
+    {{> molecules-banner-card}}
+    {{> molecules-banner-card}}
+  </div>
 </section>
