@@ -1,0 +1,93 @@
+<style>
+  .masonry {
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px;
+  }
+
+  @media only screen and (min-width: 500px) {
+    .masonry {
+      flex-direction: row;
+    }
+  }
+
+  .column {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 500px) {
+    .column {
+      width: calc(100%/2);
+    }
+  }
+</style>
+<section id="one" class="wrapper style1 special" style="height: auto;">
+  <div class="inner ui main container">
+    <div class="masonry">
+      <div class="column">
+        <div class="item">
+          <div class="item__content">
+            <div style="text-align: left;color: black;">
+              <header style="margin: 0 0 1.25em 0;">
+                <p style="
+          font-size: 10vh;
+          font-weight: 700;
+          line-height: 1.1em;
+          letter-spacing: 0em;">
+                  XXX XXXX
+                  <br />
+                  XX XXXX
+                </p>
+              </header>
+              <div class="content">
+                <ul class="actions">
+                  <li><a href="#one" class=" button next scrolly"
+                      style="box-shadow:none;padding-left:0px;text-transform:none"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item_content" style="height: 70vh;width: 50vh;">
+            <div
+              style="height: 100%;width: 100%;background-image:url('../../images/restant.png'); background-size: cover; padding-right: 10em;position: relative;">
+              <div class="cards" style="
+                z-index: 3;
+                position: absolute;
+                bottom: 0;
+                width: 70%;
+                background: white;
+                display: flex;
+                justify-content: space-evenly;
+                height: 12vh;">
+                {{> molecules-banner-card}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- more items -->
+      </div>
+      <div class="column">
+        <div class="item">
+          <div class="item__content">
+           
+          </div>
+        </div>
+        <div class="item">
+          <div class="item__content">
+            2-2
+          </div>
+        </div>
+        <div class="item">
+          <div class="item__content">
+            2-3
+          </div>
+        </div>
+        <!-- more items -->
+      </div>
+    </div>
+  </div>
+</section>
