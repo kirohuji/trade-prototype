@@ -10,7 +10,7 @@
 		$body = $('body'),
 		$wrapper = $('#page-wrapper'),
 		$banner = $('#banner'),
-		$header = $('#header');
+		$header = $('#header-2');
 
 	// Breakpoints.
 		breakpoints({
@@ -78,6 +78,7 @@
 				leave:		function() { $header.removeClass('alt'); }
 			});
 
-		}
+    }
+    
 
 })(jQuery);

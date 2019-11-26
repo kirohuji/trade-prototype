@@ -1,0 +1,13 @@
+
+<div id="wrapper">
+  {{> templates-header-two}}
+  {{> organisms-banner-one}}
+  {{> templates-content-one}}
+  {{> templates-footer-one}}
+</div>
+<script>
+  window.onload = function () {
+    var theme = document.getElementById('banner-theme');
+    theme.setAttribute("href", '../../css/components/banner/banner.css');
+  }
+</script>

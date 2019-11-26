@@ -1,6 +1,6 @@
-/* Header */
+/* header-2 */
 
-@-moz-keyframes reveal-header {
+@-moz-keyframes reveal-header-2 {
   0% {
     top: -4em;
     opacity: 0;
@@ -12,7 +12,7 @@
   }
 }
 
-@-webkit-keyframes reveal-header {
+@-webkit-keyframes reveal-header-2 {
   0% {
     top: -4em;
     opacity: 0;
@@ -24,7 +24,7 @@
   }
 }
 
-@-ms-keyframes reveal-header {
+@-ms-keyframes reveal-header-2 {
   0% {
     top: -4em;
     opacity: 0;
@@ -36,7 +36,7 @@
   }
 }
 
-@keyframes reveal-header {
+@keyframes reveal-header-2 {
   0% {
     top: -4em;
     opacity: 0;
@@ -49,6 +49,10 @@
 }
 
 #header-2 {
+  -moz-transition: background-color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -70,6 +74,10 @@
 }
 
   #header-2 .logo {
+    -moz-transition: background-color 0.2s ease;
+    -webkit-transition: background-color 0.2s ease;
+    -ms-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
     border: 0;
     display: inline-block;
     font-size: 0.8em;
@@ -173,10 +181,10 @@
           }
 
   #header-2.reveal {
-    -moz-animation: reveal-header 0.35s ease;
-    -webkit-animation: reveal-header 0.35s ease;
-    -ms-animation: reveal-header 0.35s ease;
-    animation: reveal-header 0.35s ease;
+    -moz-animation: reveal-header-2 0.35s ease;
+    -webkit-animation: reveal-header-2 0.35s ease;
+    -ms-animation: reveal-header-2 0.35s ease;
+    animation: reveal-header-2 0.35s ease;
   }
 
   #header-2.alt {
