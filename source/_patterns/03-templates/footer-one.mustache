@@ -12,3 +12,20 @@
     <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
   </ul>
 </footer>
+<script>
+  $(document).ready(function () {
+    let footer = document.createElement('link');
+    footer.setAttribute("rel", "stylesheet");
+    footer.setAttribute("type", "text/css");
+    footer.setAttribute("href", '../../css/components/footer/footer.css');
+    document.getElementsByTagName("head")[0].appendChild(footer);
+    
+    {{# icons }}
+    let icons = document.createElement('link');
+    icons.setAttribute("rel", "stylesheet");
+    icons.setAttribute("type", "text/css");
+    icons.setAttribute("href", '../../css/components/icons/icons.css');
+    document.getElementsByTagName("head")[0].appendChild(icons);
+    {{/ icons }}
+  })
+</script>

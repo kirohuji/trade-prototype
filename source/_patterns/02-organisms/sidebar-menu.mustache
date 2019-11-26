@@ -9,3 +9,12 @@
   <a class="item">Login</a>
   <a class="item">Signup</a>
 </div>
+<script>
+  $(document).ready(function () {
+    let semantic = document.createElement('link');
+    semantic.setAttribute("rel", "stylesheet");
+    semantic.setAttribute("type", "text/css");
+    semantic.setAttribute("href", '../../css/common/semantic.min.css');
+    document.getElementsByTagName("head")[0].appendChild(semantic);
+  })
+</script>

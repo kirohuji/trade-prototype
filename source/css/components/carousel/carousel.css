@@ -122,18 +122,22 @@
 
 .carousel__indicator--horizontal {
   display: inline-block;
-  padding: 12px 4px
+  padding: 12px 12px
 }
 
 .carousel__indicator--vertical {
   padding: 12px 12px
 }
 
-.carousel__indicator--vertical .carousel__button {
+.carousel__indicator--horizontal .carousel__button {
   width: 10px;
   height: 10px;
 }
 
+.carousel__indicator--vertical .carousel__button {
+  width: 10px;
+  height: 10px;
+}
 .carousel__indicator.is-active button {
   opacity: 1
 }

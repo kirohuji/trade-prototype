@@ -27,8 +27,11 @@
   </nav>
 </header>
 <script>
-  window.onload  = function () {
-    var theme = document.getElementById('theme');
-    theme.setAttribute("href", '../../css/components/basic/basic-1.css');
-  }
+  $(document).ready(function () {
+    let headerOne = document.createElement('link');
+    headerOne.setAttribute("rel", "stylesheet");
+    headerOne.setAttribute("type", "text/css");
+    headerOne.setAttribute("href", '../../css/components/header/header-one.css');
+    document.getElementsByTagName("head")[0].appendChild(headerOne);
+  })
 </script>

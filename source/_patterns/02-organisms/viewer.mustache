@@ -1,12 +1,15 @@
-<div id="viewer">
+<div id="viewer" style="z-index: 3;">
   <div class="inner">
     <div class="nav-next"></div>
     <div class="nav-previous"></div>
   </div>
 </div>
 <script>
-  window.onload  = function () {
-    var theme = document.getElementById('theme');
-    theme.setAttribute("href", '../../css/components/basic/basic-1.css');
-  }
+  $(document).ready(function () {
+    let viewer = document.createElement('link');
+    viewer.setAttribute("rel", "stylesheet");
+    viewer.setAttribute("type", "text/css");
+    viewer.setAttribute("href", '../../css/components/viewer/viewer.css');
+    document.getElementsByTagName("head")[0].appendChild(viewer);
+  })
 </script>

@@ -2,3 +2,12 @@
   <div class="carousel__mask">
   </div>
 </div>
+<script>
+  $(document).ready(function () {
+    let carouselItem = document.createElement('link');
+    carouselItem.setAttribute("rel", "stylesheet");
+    carouselItem.setAttribute("type", "text/css");
+    carouselItem.setAttribute("href", '../../css/components/carousel/carousel-item.css');
+    document.getElementsByTagName("head")[0].appendChild(carouselItem);
+  })
+</script>

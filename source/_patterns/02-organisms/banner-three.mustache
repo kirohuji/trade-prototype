@@ -1,21 +1,74 @@
 <!-- Banner -->
+<style>
+.content ul li {
+  padding-left: 0;
+}
+.content ul {
+  padding-left: 0;
+}
+</style>
+{{# basicOne}}
+<div id="wrapper">
+{{/ basicOne}}
 <section id="banner" class="major">
+  <div style="height: 100%;width:100%">
+    {{> organisms-carousel-horizontal}}
+  </div>
   <div class="inner">
     <header class="major">
-      <h1>Hi, my name is Forty</h1>
+      <h1>Hi, XXXX</h1>
     </header>
     <div class="content">
-      <p>A responsive site template designed by HTML5 UP<br />
-        and released under the Creative Commons.</p>
+      <p>XXX XXXXXX XXX XXXX XXXX XXX XX <br />
+        XXXXX  XXX XX XXXXXXXX XXXXXXXX X.</p>
+    </div>
+    <div class="content">
       <ul class="actions">
-        <li><a href="#one" class="button next scrolly">Get Started</a></li>
+        <li><a href="#one" class="button next scrolly">了解更多</a></li>
       </ul>
     </div>
   </div>
 </section>
+{{# basicOne}}
+</div>
+{{/ basicOne}}
 <script>
-  window.onload = function () {
-    var theme = document.getElementById('banner-theme');
-    theme.setAttribute("href", '../../css/components/banner/banner-three.css');
-  }
+  $(document).ready(function () {
+    let bannerThree = document.createElement('link');
+    bannerThree.setAttribute("rel", "stylesheet");
+    bannerThree.setAttribute("type", "text/css");
+    bannerThree.setAttribute("href", '../../css/components/banner/banner-three.css');
+    document.getElementsByTagName("head")[0].appendChild(bannerThree);
+
+    
+    let noscript = document.createElement('link');
+    noscript.setAttribute("rel", "stylesheet");
+    noscript.setAttribute("type", "text/css");
+    noscript.setAttribute("href", '../../css/components/banner/noscript.css');
+    document.getElementsByTagName("head")[0].appendChild(noscript);
+
+    let section = document.createElement('link');
+    section.setAttribute("rel", "stylesheet");
+    section.setAttribute("type", "text/css");
+    section.setAttribute("href", '../../css/components/section/article.css');
+    document.getElementsByTagName("head")[0].appendChild(section);
+
+    let buttonsTwo = document.createElement('link');
+    buttonsTwo.setAttribute("rel", "stylesheet");
+    buttonsTwo.setAttribute("type", "text/css");
+    buttonsTwo.setAttribute("href", '../../css/components/buttons/buttons-two.css');
+    document.getElementsByTagName("head")[0].appendChild(buttonsTwo);
+
+    
+    let iconTwo = document.createElement('link');
+    iconTwo.setAttribute("rel", "stylesheet");
+    iconTwo.setAttribute("type", "text/css");
+    iconTwo.setAttribute("href", '../../css/components/icons/icons-two.css');
+    document.getElementsByTagName("head")[0].appendChild(iconTwo);
+
+    {{# basicOne }}
+    let theme = document.getElementById('theme');
+    theme.setAttribute("href", '../../css/components/basic/basic-one.css');
+    {{/ basicOne }}
+  })
 </script>

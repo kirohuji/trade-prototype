@@ -15,3 +15,12 @@
     </div>
   </div>
 </div>
+<script>
+  $(document).ready(function () {
+    let semanticUi = document.createElement('link');
+    semanticUi.setAttribute("rel", "stylesheet");
+    semanticUi.setAttribute("type", "text/css");
+    semanticUi.setAttribute("href", '../../css/common/semantic.min.css');
+    document.getElementsByTagName("head")[0].appendChild(semanticUi);
+  })
+</script>

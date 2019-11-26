@@ -6,8 +6,11 @@
   </nav>
 </header>
 <script>
-  window.onload  = function () {
-    var theme = document.getElementById('theme');
-    theme.setAttribute("href", '../../css/components/banner/banner-three.css');
-  }
+  $(document).ready(function () {
+    let headerTwo = document.createElement('link');
+    headerTwo.setAttribute("rel", "stylesheet");
+    headerTwo.setAttribute("type", "text/css");
+    headerTwo.setAttribute("href", '../../css/components/header/header-two.css');
+    document.getElementsByTagName("head")[0].appendChild(headerTwo);
+  })
 </script>

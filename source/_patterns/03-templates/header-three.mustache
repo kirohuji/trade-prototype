@@ -1,0 +1,102 @@
+<!-- Menu -->
+<style>
+  body{
+    background-color: #1c1d26;
+  }
+  .ui.main.container {
+    margin-top:1em;
+  }
+  .ui.text.menu {
+    margin: 0;
+    padding: 0;
+  }
+
+  .ui.text.menu .item {
+    margin: 0px 8px;
+    font-weight: 700;
+    color: white;
+  }
+
+  .ui.text.menu .active.item {
+    font-weight: 700;
+    color: #009688;
+    font-size: 40px;
+    font-family: 'Hiragino Kaku Gothic Pro';
+  }
+  a {
+    border-bottom:none;
+  }
+  {{# white}}
+    body{
+      background-color: white;
+    }
+    .ui.text.menu .item {
+      color:black;
+    }
+    .ui.main.container {
+      margin-top:0;
+    }
+  {{/ white}}
+</style>
+<header class="ui main container">
+  <div class="ui text menu">
+    <a class="active item">
+      logix
+    </a>
+    <div class="right menu">
+      <div class="item">
+        <div class="ui text menu">
+          <a class="item">
+            Headphones
+          </a>
+          <a class="item">
+            Performance
+          </a>
+          <a class="item">
+            Company
+          </a>
+          <a class="item">
+            Media
+          </a>
+          <a class="item">
+            Support
+          </a>
+        </div>
+      </div>
+      <a class="ui item">
+        <div class="ui text menu">
+          <a class="item">
+            <i class="search link icon"></i>
+          </a>
+          <a class="item">
+            <i class="shopping cart link icon"></i>
+          </a>
+          <a class="item">
+            <i class="user icon"></i>
+          </a>
+        </div>
+      </a>
+    </div>
+  </div>
+</header>
+<script>
+  $(document).ready(function () {
+    let menuTwo = document.createElement('link');
+    menuTwo.setAttribute("rel", "stylesheet");
+    menuTwo.setAttribute("type", "text/css");
+    menuTwo.setAttribute("href", '../../css/components/menu/menu-two.css');
+    document.getElementsByTagName("head")[0].appendChild(menuTwo);
+
+    let iconsTwo = document.createElement('link');
+    iconsTwo.setAttribute("rel", "stylesheet");
+    iconsTwo.setAttribute("type", "text/css");
+    iconsTwo.setAttribute("href", '../../css/components/icons/icons-two.css');
+    document.getElementsByTagName("head")[0].appendChild(iconsTwo);
+
+    let container = document.createElement('link');
+    container.setAttribute("rel", "stylesheet");
+    container.setAttribute("type", "text/css");
+    container.setAttribute("href", "../../css/components/container/container.css")
+    document.getElementsByTagName("head")[0].appendChild(container)
+  })
+</script>

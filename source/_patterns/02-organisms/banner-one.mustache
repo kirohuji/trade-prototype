@@ -4,7 +4,8 @@
     {{> organisms-carousel}}
   </div>
   <div class="inner">
-    <div class="ui main container" style="color: white;display: flex;justify-content: space-between;align-items: center;">
+    <div class="ui main container"
+      style="color: white;display: flex;justify-content: space-between;align-items: center;">
       <div style="text-align: left;">
         <p>XXXX</p>
         <header style="margin: 0 0 1.25em 0;">
@@ -12,7 +13,8 @@
           font-size: 10vh;
           font-weight: 700;
           line-height: 1.1em;
-          letter-spacing: 0em;">
+          letter-spacing: 0em;
+          margin:0">
             XXX XXXX
             <br />
             XX XXXX
@@ -20,7 +22,8 @@
         </header>
         <div class="content">
           <ul class="actions">
-            <li><a href="#one" class=" button next scrolly" style="box-shadow:none;padding-left:0px;text-transform:none">了解更多</a></li>
+            <li><a href="#one" class=" button next scrolly"
+                style="box-shadow:none;padding-left:0px;text-transform:none">了解更多</a></li>
           </ul>
         </div>
       </div>
@@ -56,3 +59,36 @@
     {{> molecules-banner-card}}
   </div>
 </section>
+<script>
+  $(document).ready(function () {
+    let bannerOne = document.createElement('link');
+    bannerOne.setAttribute("rel", "stylesheet");
+    bannerOne.setAttribute("type", "text/css");
+    bannerOne.setAttribute("href", '../../css/components/banner/banner-one.css');
+    document.getElementsByTagName("head")[0].appendChild(bannerOne);
+
+    let noscript = document.createElement('link');
+    noscript.setAttribute("rel", "stylesheet");
+    noscript.setAttribute("type", "text/css");
+    noscript.setAttribute("href", '../../css/components/banner/noscript.css');
+    document.getElementsByTagName("head")[0].appendChild(noscript);
+
+    let buttons = document.createElement('link');
+    buttons.setAttribute("rel", "stylesheet");
+    buttons.setAttribute("type", "text/css");
+    buttons.setAttribute("href", '../../css/components/buttons/buttons.css');
+    document.getElementsByTagName("head")[0].appendChild(buttons);
+
+    let actions = document.createElement('link');
+    actions.setAttribute("rel", "stylesheet");
+    actions.setAttribute("type", "text/css");
+    actions.setAttribute("href", '../../css/components/actions/actions.css');
+    document.getElementsByTagName("head")[0].appendChild(actions);
+
+    let container = document.createElement('link');
+    container.setAttribute("rel","stylesheet");
+    container.setAttribute("type","text/css");
+    container.setAttribute("href","../../css/components/container/container.css")
+    document.getElementsByTagName("head")[0].appendChild(container)
+  })
+</script>
