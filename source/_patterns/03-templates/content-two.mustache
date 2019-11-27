@@ -1,0 +1,67 @@
+<!-- One -->
+<style>
+  .special-two {
+    padding: 4.5em 0 2.5em 0;
+    border-bottom: solid 2px #eeeeee;
+    text-align: center;
+    background-color: white;
+  }
+
+  .special-two .major h2 {
+    font-weight: 700;
+    color: black;
+    font-size: 2em;
+    font-family: 'Hiragino Kaku Gothic Pro';
+  }
+
+  .special-two .cards {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+    margin: 3em 0;
+    display: flex;
+  }
+
+  .special-two .card {
+    width: 100%;
+    margin:0 0.5em;
+    box-shadow: 0 0 0 2px #f1f1f1;
+    padding: 1em 2em;
+    border-radius: .28571429rem;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: black;
+    font-family: 'Hiragino Kaku Gothic Pro';
+  }
+</style>
+<section class="special-two">
+  <header class="major" style="width: auto;">
+    <h2>Why Buy from us</h2>
+  </header>
+  <div class="ui main container">
+  <div class="ui cards">
+    {{> molecules-project-cards-show}}
+    {{> molecules-project-cards-show}}
+    {{> molecules-project-cards-show}}
+    {{> molecules-project-cards-show}}
+  </d>
+  </div>
+</section>
+<script>
+  $(document).ready(function () {
+    let iconTwo = document.createElement('link');
+    iconTwo.setAttribute("rel", "stylesheet");
+    iconTwo.setAttribute("type", "text/css");
+    iconTwo.setAttribute("href", '../../css/components/icons/icons-two.css');
+    document.getElementsByTagName("head")[0].appendChild(iconTwo);
+
+    $(document).ready(function () {
+    let container = document.createElement('link');
+    container.setAttribute("rel", "stylesheet");
+    container.setAttribute("type", "text/css");
+    container.setAttribute("href", "../../css/components/container/container.css")
+    document.getElementsByTagName("head")[0].appendChild(container)
+  })
+  })
+</script>

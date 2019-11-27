@@ -1,0 +1,80 @@
+<!-- One -->
+<style>
+  .special {
+    padding: 4.5em 0 2.5em 0;
+    border-bottom: solid 2px #eeeeee;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .special .major h2 {
+    font-weight: 700;
+    color: black;
+    font-size: 2em;
+    font-family: 'Hiragino Kaku Gothic Pro';
+  }
+
+  .special .cards {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+    margin: 3em 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .special ul li {
+    display: inline-block;
+    padding: 0 0.5em;
+  }
+
+  .special ul li .card {
+    /**    box-shadow: 0 0 0 2px #f1f1f1; **/
+    padding: 1em 2em;
+    border-radius: .28571429rem;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: black;
+    font-family: 'Hiragino Kaku Gothic Pro';
+  }
+</style>
+<section class="special">
+  <header class="major" style="width: 50%;">
+    <h2>Headphones</h2>
+    <p style="color:black;line-height: 1.5em;">We can give your company superpowers to do things that they never
+      thought possible. Let us delight your
+      customers and empower your needs...through pure data analytics.</p>
+  </header>
+  <ul class="ui six doubling cards">
+    <li>{{> molecules-project-cards-show}}</li>
+    <li>{{> molecules-project-cards-show}}</li>
+    <li>{{> molecules-project-cards-show}}</li>
+    <li>{{> molecules-project-cards-show}}</li>
+  </ul>
+  <div class="content">
+    <ul class="actions">
+      <li><a href="#one" class="button next scrolly" style="color: black;box-shadow: inset 0 0 0 2px #000000;">了解更多</a></li>
+    </ul>
+  </div>
+</section>
+<script>
+  $(document).ready(function () {
+    let iconTwo = document.createElement('link');
+    iconTwo.setAttribute("rel", "stylesheet");
+    iconTwo.setAttribute("type", "text/css");
+    iconTwo.setAttribute("href", '../../css/components/icons/icons-two.css');
+    document.getElementsByTagName("head")[0].appendChild(iconTwo);
+
+    let buttonsTwo = document.createElement('link');
+    buttonsTwo.setAttribute("rel", "stylesheet");
+    buttonsTwo.setAttribute("type", "text/css");
+    buttonsTwo.setAttribute("href", '../../css/components/buttons/buttons-two.css');
+    document.getElementsByTagName("head")[0].appendChild(buttonsTwo);
+  })
+</script>

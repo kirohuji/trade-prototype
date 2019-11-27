@@ -1,0 +1,115 @@
+  /* Carousel */
+
+  .carousel-two {
+    position: relative;
+    overflow: hidden;
+    padding: 2em 0 2em 0;
+    margin-bottom: 0;
+  }
+
+  .overview-wrapper .forward,
+  .overview-wrapper .backward {
+    position: absolute;
+    top: 50%;
+    width: 6em;
+    height: 12em;
+    margin-top: -6em;
+    cursor: pointer;
+  }
+
+  .overview-wrapper .forward:after,
+  .overview-wrapper .backward:after {
+    content: '';
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    top: 50%;
+    margin: -1.5em 0 0 0;
+    background: url("./images/arrow.svg") no-repeat center center;
+  }
+  .overview-wrapper .forward {
+    right: 0;
+  }
+
+  .overview-wrapper .forward:after {
+    right: -0.25em;
+  }
+
+  .overview-wrapper .backward {
+    left: 0;
+  }
+
+  .overview-wrapper .backward:after {
+    left: -0.25em;
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  .carousel-two .reel {
+    white-space: nowrap;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 2em 0 2em;
+  }
+
+  .carousel-two article {
+    display: inline-block;
+    width: 12em;
+    height: 16em;
+    text-align: center;
+    margin: 0 2em 0 0;
+    white-space: normal;
+    opacity: 1.0;
+    -moz-transition: opacity 0.75s ease-in-out;
+    -webkit-transition: opacity 0.75s ease-in-out;
+    -ms-transition: opacity 0.75s ease-in-out;
+    transition: opacity 0.75s ease-in-out;
+  }
+
+  .carousel-two article.loading {
+    opacity: 0;
+  }
+
+  .carousel-two article .image {
+    position: relative;
+    left: -1em;
+    top: 0;
+    width: auto;
+    margin-right: -2em;
+    margin-bottom: 3em;
+  }
+
+  .carousel-two article p {
+    text-align: center;
+  }
+  
+/* Wide */
+
+@media screen and (max-width: 1680px) {
+
+  /* Basic */
+
+    body, input, textarea, select {
+      font-size: 14pt;
+      line-height: 1.75em;
+    }
+
+  /* Carousel */
+
+    .carousel-two {
+      padding: 1.5em 0 1.5em 0;
+    }
+
+      .carousel-two .reel {
+        padding: 5.5em 2.5em 0 2.5em;
+      }
+
+      .carousel-two article {
+        width: 12em;
+        height: 16em;
+        margin: 0 1.25em 0 0;
+      }
+
+}

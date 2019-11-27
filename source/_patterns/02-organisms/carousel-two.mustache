@@ -1,0 +1,263 @@
+<style>
+  /* Image */
+
+  .image {
+    position: relative;
+    display: inline-block;
+    border: 0;
+    outline: 0;
+  }
+
+  .image img {
+    display: block;
+    width: 100%;
+  }
+
+  .image.fit {
+    display: block;
+    width: 100%;
+  }
+
+  .image.featured {
+    display: block;
+    width: 100%;
+    margin: 0 0 4em 0;
+  }
+
+  .image.left {
+    float: left;
+    margin: 0 2em 2em 0;
+  }
+
+  .image.centered {
+    display: block;
+    margin: 0 0 2em 0;
+  }
+
+  .image.centered img {
+    margin: 0 auto;
+    width: auto;
+  }
+
+  .overview-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .overview-wrapper .overview {
+    width: 100%;
+  }
+
+  .overview-wrapper .overview h2 {
+    font-weight: 700;
+    color: white;
+    font-size: 1.3em;
+    font-family: 'Hiragino Kaku Gothic Pro';
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    background-image: url("../../images/bg1.jpg");
+    padding-top: 1.5em;
+  }
+
+  .overview-wrapper .reel article .card {
+    box-shadow: 0 0 0 2px #f1f1f1;
+    padding: 1em 2em;
+    border-radius: .28571429rem;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: black;
+    font-family: 'Hiragino Kaku Gothic Pro';
+    background-color: white;
+    height:100%;
+  }
+</style>
+<section class="overview-wrapper">
+  <header class="overview">
+    <h2>Products overview</h2>
+  </header>
+  <section class="carousel-two" style="width:80%;position: relative;padding: 0;">
+    <div class="reel">
+      {{> molecules-carousel-two-item}}
+      {{> molecules-carousel-two-item}}
+      {{> molecules-carousel-two-item}}
+      {{> molecules-carousel-two-item}}
+      {{> molecules-carousel-two-item}}
+      {{> molecules-carousel-two-item}}
+      {{> molecules-carousel-two-item}}
+      {{> molecules-carousel-two-item}}
+      
+    </div>
+  </section>
+</section>
+
+<script>
+  $(document).ready(function () {
+    let carouselTwo = document.createElement('link');
+    carouselTwo.setAttribute("rel", "stylesheet");
+    carouselTwo.setAttribute("type", "text/css");
+    carouselTwo.setAttribute("href", '../../css/components/carousel-two/carousel-two.css');
+    document.getElementsByTagName("head")[0].appendChild(carouselTwo);
+
+    let iconTwo = document.createElement('link');
+    iconTwo.setAttribute("rel", "stylesheet");
+    iconTwo.setAttribute("type", "text/css");
+    iconTwo.setAttribute("href", '../../css/components/icons/icons-two.css');
+    document.getElementsByTagName("head")[0].appendChild(iconTwo);
+
+    let $window = $(window),
+      $body = $('body'),
+      settings = {
+
+        // Carousels
+        carousels: {
+          speed: 4,
+          fadeIn: true,
+          fadeDelay: 250
+        },
+
+      };
+    // Carousels.
+    $('.carousel-two').each(function () {
+
+      let $t = $(this),
+        $forward = $('<span class="forward"></span>'),
+        $backward = $('<span class="backward"></span>'),
+        $overviewWrapper = $('.overview-wrapper')
+        $reel = $t.children('.reel'),
+        $items = $reel.children('article');
+
+      let pos = 0,
+        leftLimit,
+        rightLimit,
+        itemWidth,
+        reelWidth,
+        timerId;
+
+      // Items.
+      if (settings.carousels.fadeIn) {
+
+        $items.addClass('loading');
+
+        $t.scrollex({
+          mode: 'middle',
+          top: '-20vh',
+          bottom: '-20vh',
+          enter: function () {
+
+            let timerId,
+              limit = $items.length - Math.ceil($window.width() / itemWidth);
+
+            timerId = window.setInterval(function () {
+              let x = $items.filter('.loading'), xf = x.first();
+
+              if (x.length <= limit) {
+
+                window.clearInterval(timerId);
+                $items.removeClass('loading');
+                return;
+
+              }
+
+              xf.removeClass('loading');
+
+            }, settings.carousels.fadeDelay);
+
+          }
+        });
+
+      }
+
+      // Main.
+      $t._update = function () {
+        pos = 0;
+        rightLimit = (-1 * reelWidth) + $window.width();
+        leftLimit = 0;
+        $t._updatePos();
+      };
+
+      $t._updatePos = function () { $reel.css('transform', 'translate(' + pos + 'px, 0)'); };
+
+      // Forward.
+      $forward
+        .appendTo($overviewWrapper)
+        .hide()
+        .mouseenter(function (e) {
+          timerId = window.setInterval(function () {
+            pos -= settings.carousels.speed;
+
+            if (pos <= rightLimit) {
+              window.clearInterval(timerId);
+              pos = rightLimit;
+            }
+
+            $t._updatePos();
+          }, 10);
+        })
+        .mouseleave(function (e) {
+          window.clearInterval(timerId);
+        });
+
+      // Backward.
+      $backward
+        .appendTo($overviewWrapper)
+        .hide()
+        .mouseenter(function (e) {
+          timerId = window.setInterval(function () {
+            pos += settings.carousels.speed;
+
+            if (pos >= leftLimit) {
+
+              window.clearInterval(timerId);
+              pos = leftLimit;
+
+            }
+
+            $t._updatePos();
+          }, 10);
+        })
+        .mouseleave(function (e) {
+          window.clearInterval(timerId);
+        });
+
+      // Init.
+      $window.on('load', function () {
+
+        reelWidth = $reel[0].scrollWidth;
+
+        if (browser.mobile) {
+
+          $reel
+            .css('overflow-y', 'hidden')
+            .css('overflow-x', 'scroll')
+            .scrollLeft(0);
+          $forward.hide();
+          $backward.hide();
+
+        }
+        else {
+
+          $reel
+            .css('overflow', 'visible')
+            .scrollLeft(0);
+          $forward.show();
+          $backward.show();
+
+        }
+
+        $t._update();
+
+        $window.on('resize', function () {
+          reelWidth = $reel[0].scrollWidth;
+          $t._update();
+        }).trigger('resize');
+
+      });
+
+    });
+  })
+</script>

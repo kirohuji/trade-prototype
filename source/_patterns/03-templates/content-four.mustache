@@ -1,0 +1,71 @@
+<!-- One -->
+<style>
+  .feature {
+    padding: 3em 0 3em 0;
+    border-bottom: solid 2px #eeeeee;
+    text-align: center;
+    background-color: black;
+  }
+
+  .feature .overview h2 {
+    font-weight: 700;
+    color: white;
+    font-size: 1.3em;
+    font-family: 'Hiragino Kaku Gothic Pro';
+    margin: 1.5em 0 0 0;
+  }
+
+  .feature .container {
+    display: flex;
+  }
+
+  .feature .container .left {
+    flex-direction: column;
+    text-align: left;
+    width: 50%;
+  }
+
+  .feature .container .right {
+    flex-direction: column;
+    text-align: right;
+    width: 50%;
+  }
+</style>
+<section class="feature">
+  <header class="overview" style="width: auto;">
+    <h2>Logix Feature</h2>
+    <div class="ui main container">
+      <div class="left">
+
+      </div>
+      <div class="right">
+        <h2>We Help Companies and Companions</h2>
+        <p style="color:white;line-height: 1.5em;">We can give your company superpowers to do things that they never
+          thought possible. Let us delight your
+          customers and empower your needs...through pure data analytics.</p>
+        <h2>We Help Companies and Companions</h2>
+        <p style="color:white;line-height: 1.5em;">We can give your company superpowers to do things that they never
+          thought possible. Let us delight your
+          customers and empower your needs...through pure data analytics.</p>
+        <h2>We Help Companies and Companions</h2>
+        <p style="color:white;line-height: 1.5em;">We can give your company superpowers to do things that they never
+          thought possible. Let us delight your
+          customers and empower your needs...through pure data analytics.</p>
+      </div>
+    </div>
+  </header>
+</section>
+<script>
+  $(document).ready(function () {
+    let container = document.createElement('link');
+    container.setAttribute("rel", "stylesheet");
+    container.setAttribute("type", "text/css");
+    container.setAttribute("href", "../../css/components/container/container.css")
+    document.getElementsByTagName("head")[0].appendChild(container)
+  })
+  let buttonsTwo = document.createElement('link');
+  buttonsTwo.setAttribute("rel", "stylesheet");
+  buttonsTwo.setAttribute("type", "text/css");
+  buttonsTwo.setAttribute("href", '../../css/components/buttons/buttons-two.css');
+  document.getElementsByTagName("head")[0].appendChild(buttonsTwo);
+</script>
