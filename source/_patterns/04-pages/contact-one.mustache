@@ -1,0 +1,63 @@
+<style>
+  body {
+    background: #f0f4f4;
+  }
+
+  .map {
+    padding: 12em 0 10em 0;
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../../images/map.png");
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../../images/map.png");
+    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../../images/map.png");
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../../images/map.png");
+    /* background-attachment: fixed; */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+
+  }
+  .map .container .card {
+    background-color: white;
+    width: 40%;
+    float: right;
+    margin: 0 0.5em;
+    box-shadow: 0 0 0 2px #f1f1f1;
+    padding: 1em 2em;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: black;
+    font-family: 'Hiragino Kaku Gothic Pro';
+    margin-bottom: 32px;
+  }
+</style>
+<div id="wrapper">
+  {{> templates-header-three}}
+  <div class="map" style="position: relative;margin-top:1em;height:100%;">
+    <div class="ui main container">
+        {{> molecules-project-cards-show}}
+    </div>
+  </div>
+  {{> templates-footer-one}}
+</div>
+<script>
+  $(document).ready(function () {
+    let theme = document.getElementById('theme');
+    theme.setAttribute("href", '../../css/components/basic/basic-one.css')
+    let iconsFooter = document.createElement('link');
+    iconsFooter.setAttribute("rel", "stylesheet");
+    iconsFooter.setAttribute("type", "text/css");
+    iconsFooter.setAttribute("href", '../../css/components/icons/icons-footer.css');
+    document.getElementsByTagName("head")[0].appendChild(iconsFooter);
+    let container = document.createElement('link');
+    container.setAttribute("rel", "stylesheet");
+    container.setAttribute("type", "text/css");
+    container.setAttribute("href", "../../css/components/container/container.css")
+    document.getElementsByTagName("head")[0].appendChild(container)
+  })
+</script>

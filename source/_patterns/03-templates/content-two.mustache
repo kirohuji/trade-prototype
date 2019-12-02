@@ -24,7 +24,7 @@
 
   .special-two .card {
     width: 100%;
-    margin:0 0.5em;
+    margin: 0 0.5em;
     box-shadow: 0 0 0 2px #f1f1f1;
     padding: 1em 2em;
     border-radius: .28571429rem;
@@ -40,13 +40,13 @@
     <h2>Why Buy from us</h2>
   </header>
   <div class="ui main container">
-  <div class="ui cards">
-    {{> molecules-project-cards-show}}
-    {{> molecules-project-cards-show}}
-    {{> molecules-project-cards-show}}
-    {{> molecules-project-cards-show}}
-  </d>
-  </div>
+    <div class="ui cards">
+      {{> molecules-project-cards-show}}
+      {{> molecules-project-cards-show}}
+      {{> molecules-project-cards-show}}
+      {{> molecules-project-cards-show}}
+      </d>
+    </div>
 </section>
 <script>
   $(document).ready(function () {
@@ -57,11 +57,11 @@
     document.getElementsByTagName("head")[0].appendChild(iconTwo);
 
     $(document).ready(function () {
-    let container = document.createElement('link');
-    container.setAttribute("rel", "stylesheet");
-    container.setAttribute("type", "text/css");
-    container.setAttribute("href", "../../css/components/container/container.css")
-    document.getElementsByTagName("head")[0].appendChild(container)
-  })
+      let container = document.createElement('link');
+      container.setAttribute("rel", "stylesheet");
+      container.setAttribute("type", "text/css");
+      container.setAttribute("href", "../../css/components/container/container.css")
+      document.getElementsByTagName("head")[0].appendChild(container)
+    })
   })
 </script>

@@ -50,7 +50,7 @@ textarea {
 } */
 
 a:hover {
-  color: #e44c65 !important;
+  /* color: #e44c65 !important; */
   border-bottom-color: transparent;
 }
 

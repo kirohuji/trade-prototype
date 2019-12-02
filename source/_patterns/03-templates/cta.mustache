@@ -1,0 +1,116 @@
+<!-- CTA -->
+<style>
+  /* CTA */
+
+  #cta {
+    background: #00b5ad;
+    /* color: #f9e6df; */
+    padding: 3.5em 0 4em 0;
+    text-align: center;
+  }
+
+  #cta h2,
+  #cta h3,
+  #cta h4,
+  #cta h5,
+  #cta h6 {
+    color: inherit;
+  }
+
+  #cta form {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 25em;
+  }
+
+  #cta input[type="submit"],
+  #cta input[type="reset"],
+  #cta input[type="button"],
+  #cta .button {
+    box-shadow: none;
+    background: #fff;
+    color: #00b5ad;
+  }
+
+  #cta input[type="text"],
+  #cta input[type="password"],
+  #cta input[type="email"],
+  #cta select,
+  #cta textarea {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    border: 0;
+  }
+
+  #cta input[type="text"]:focus,
+  #cta input[type="password"]:focus,
+  #cta input[type="email"]:focus,
+  #cta select:focus,
+  #cta textarea:focus {
+    box-shadow: inset 0 0 0 2px #fff;
+  }
+
+  #cta ::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.75) !important;
+  }
+
+  #cta :-moz-placeholder {
+    color: rgba(255, 255, 255, 0.75) !important;
+  }
+
+  #cta ::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.75) !important;
+  }
+
+  #cta :-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.75) !important;
+  }
+
+  #cta .formerize-placeholder {
+    color: rgba(255, 255, 255, 0.75) !important;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: stretch;
+  }
+</style>
+<section id="cta">
+
+  <h2>Sign up for beta access</h2>
+  <p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
+
+  <form>
+    <div class="row gtr-50 gtr-uniform">
+      <div class="col-8 col-12-mobilep" style="padding: 1em;">
+        <input type="email" name="email" id="email" placeholder="电子 邮件" />
+      </div>
+      <div class="col-4 col-12-mobilep" style="padding: 1em;">
+        <input type="submit" value="发送" class="fit" style="height: 3.8em;"/>
+      </div>
+    </div>
+  </form>
+
+</section>
+<script>
+    $(document).ready(function () {
+
+      $(document).ready(function () {
+        let form = document.createElement('link');
+        form.setAttribute("rel", "stylesheet");
+        form.setAttribute("type", "text/css");
+        form.setAttribute("href", "../../css/components/form/form.css")
+        document.getElementsByTagName("head")[0].appendChild(form)
+      })
+
+      $(document).ready(function () {
+        let buttons = document.createElement('link');
+        buttons.setAttribute("rel", "stylesheet");
+        buttons.setAttribute("type", "text/css");
+        buttons.setAttribute("href", "../../css/components/buttons/buttons.css")
+        document.getElementsByTagName("head")[0].appendChild(buttons)
+      })
+    })
+  </script>
