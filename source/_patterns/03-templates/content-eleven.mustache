@@ -1,5 +1,56 @@
+<style>
+.eleven {
+  display:block;
+  padding: 5em 0 3em 0;
+  background: #fff;
+}
+.eleven .container {
+  margin: 0 auto;
+  max-width: 100%;
+}
+.eleven .container ul.links {
+  list-style: none;
+  padding-left: 0;
+}
+.eleven .container ul.links li {
+  line-height: 2.5em;
+  padding-left: 0;
+}
+.eleven .container a {
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  color: #37c0fb;
+  text-decoration: none;
+  border-bottom: dotted 1px;
+}
+.eleven .container header p {
+  color: #999;
+  font-size: 1.25em;
+  position: relative;
+  margin-top: -1.25em;
+  margin-bottom: 2.25em;
+}
+.eleven .container h1, h2, h3, h4, h5, h6 {
+  color: black;
+  font-weight: 600;
+  line-height: 1.75em;
+  margin-bottom: 1em;
+}
+.eleven .container h3 {
+  font-size: 1.2em;
+  letter-spacing: -0.025em;
+}
+.eleven .container p, ul, ol, dl, table, blockquote {
+  color: black;
+  margin: 0 0 2em 0;
+}
+@media screen and (max-width: 1680px) {
+  .eleven .container {
+    width: 1200px;
+  }
+}
+</style>
 <!-- Main -->
-<section class="wrapper style1">
+<section class="eleven">
   <div class="container">
     <div class="row gtr-200">
       <div class="col-4 col-12-narrower">
@@ -72,3 +123,12 @@
     </div>
   </div>
 </section>
+<script>
+  $(document).ready(function () {
+    let row = document.createElement('link');
+    row.setAttribute("rel", "stylesheet");
+    row.setAttribute("type", "text/css");
+    row.setAttribute("href", '../../css/components/row/row.css');
+    document.getElementsByTagName("head")[0].appendChild(row);
+  })
+</script>

@@ -1,0 +1,24 @@
+<style>
+body {
+  background: #f0f4f4;
+}
+</style>
+<div id="wrapper">
+  {{> templates-header-three}}
+  <div style="position: relative;">
+    {{> templates-content-eight}}
+  </div>
+  {{> templates-content-eleven}}
+  {{> templates-footer-one}}
+</div>
+<script>
+  $(document).ready(function () {
+    let theme = document.getElementById('theme');
+    theme.setAttribute("href", '../../css/components/basic/basic-one.css')
+    let iconsFooter = document.createElement('link');
+    iconsFooter.setAttribute("rel", "stylesheet");
+    iconsFooter.setAttribute("type", "text/css");
+    iconsFooter.setAttribute("href", '../../css/components/icons/icons-footer.css');
+    document.getElementsByTagName("head")[0].appendChild(iconsFooter);
+  })
+</script>
