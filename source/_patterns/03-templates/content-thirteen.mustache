@@ -1,31 +1,95 @@
+<style>
+  .eleven {
+    display: block;
+    padding: 2em 0 3em 0;
+    background: #fff;
+  }
+
+  .eleven .container {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .eleven .container ul.links {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .eleven .container ul.links li {
+    line-height: 2.5em;
+    padding-left: 0;
+  }
+
+  .eleven .container a {
+    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    color: #37c0fb;
+    text-decoration: none;
+    border-bottom: dotted 1px;
+  }
+
+  .eleven .container header p {
+    color: #999;
+    font-size: 1.25em;
+    position: relative;
+    margin-top: -1.25em;
+    margin-bottom: 2.25em;
+  }
+
+  .eleven .container h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: black;
+    font-weight: 600;
+    line-height: 1.75em;
+    margin-bottom: 1em;
+  }
+
+  .eleven .container h3 {
+    font-size: 1.2em;
+    letter-spacing: -0.025em;
+  }
+
+  .eleven .container p,
+  ul,
+  ol,
+  dl,
+  table,
+  blockquote {
+    color: black;
+    margin: 0 0 2em 0;
+  }
+
+  @media screen and (max-width: 1680px) {
+    .eleven .container {
+      width: 1200px;
+    }
+  }
+
+  .actions button,
+  .actions .button {
+    color: black;
+    box-shadow: inset 0 0 0 2px #000000;
+  }
+
+  ul.actions li {
+    padding: 0;
+  }
+</style>
 <!-- Main -->
-<section class="wrapper style1">
+<section class="eleven">
   <div class="container">
     <div class="row gtr-200">
-      <div class="col-3 col-12-narrower">
-        <div id="sidebar1">
-
-          <!-- Sidebar 1 -->
-
-          <section>
-            <h3>Just a Subheading</h3>
-            <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-              Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-              Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis et nisi etiam.</p>
-            <footer>
-              <a href="#" class="button">Continue Reading</a>
-            </footer>
-          </section>
-
+      <div class="col-4 col-12-narrower">
+        <div id="sidebar">
+          <!-- Sidebar -->
           <section>
             <h3>Another Subheading</h3>
             <ul class="links">
-              <li><a href="#">Amet turpis, feugiat sit amet</a></li>
-              <li><a href="#">Ornare in hendrerit lectus</a></li>
-              <li><a href="#">Semper mod quis eget dolore</a></li>
-              <li><a href="#">Consequat lorem phasellus</a></li>
-              <li><a href="#">Amet turpis feugiat amet</a></li>
-              <li><a href="#">Semper mod quisturpis nisi</a></li>
+              <li><a href="#">Amet turpis, feugiat et sit amet</a></li>
+              <li><a href="#">Ornare in hendrerit in lectus</a></li>
             </ul>
             <footer>
               <a href="#" class="button">More Random Links</a>
@@ -34,72 +98,48 @@
 
         </div>
       </div>
-      <div class="col-6 col-12-narrower imp-narrower">
+      <div class="col-8  col-12-narrower imp-narrower">
         <div id="content">
 
           <!-- Content -->
 
           <article>
             <header>
-              <h2>Two Sidebar</h2>
-              <p>Yup. Two sidebars at the same time.</p>
+              <h2>Left Sidebar</h2>
             </header>
-
-            <span class="image featured"><img src="images/banner.jpg" alt="" /></span>
-
-            <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-              Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-              Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-              consequat etiam lorem ipsum dolor sit amet nullam.</p>
-
-            <h3>And Yet Another Subheading</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
-              justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis,
-              ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
-              rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
-              Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
-              Phasellus sed nisl vitae risus tristique volutpat. Cras rutrum commodo luctus.</p>
-
-            <p>Phasellus odio risus, faucibus et viverra vitae, eleifend ac purus. Praesent mattis, enim
-              quis hendrerit porttitor, sapien tortor viverra magna, sit amet rhoncus nisl lacus nec arcu.
-              Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
-              Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus.</p>
+            <div class="ui celled list">
+              {{> molecules-news-item}}
+              {{> molecules-news-item}}
+              {{> molecules-news-item}}
+            </div>
           </article>
-
-        </div>
-      </div>
-      <div class="col-3 col-12-narrower">
-        <div id="sidebar2">
-
-          <!-- Sidebar 2 -->
-
-          <section>
-            <h3>Another Subheading</h3>
-            <ul class="links">
-              <li><a href="#">Amet turpis, feugiat sit amet</a></li>
-              <li><a href="#">Ornare in hendrerit lectus</a></li>
-              <li><a href="#">Semper mod quis eget dolore</a></li>
-              <li><a href="#">Consequat lorem phasellus</a></li>
-              <li><a href="#">Amet turpis feugiat amet</a></li>
-              <li><a href="#">Semper mod quisturpis nisi</a></li>
-            </ul>
-            <footer>
-              <a href="#" class="button">More Random Links</a>
-            </footer>
-          </section>
-
-          <section>
-            <h3>Just a Subheading</h3>
-            <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-              Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-              Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis et nisi etiam.</p>
-            <footer>
-              <a href="#" class="button">Continue Reading</a>
-            </footer>
-          </section>
 
         </div>
       </div>
     </div>
   </div>
 </section>
+<script>
+  $(document).ready(function () {
+    let row = document.createElement('link');
+    row.setAttribute("rel", "stylesheet");
+    row.setAttribute("type", "text/css");
+    row.setAttribute("href", '../../css/components/row/row.css');
+    document.getElementsByTagName("head")[0].appendChild(row);
+    let list = document.createElement('link');
+    list.setAttribute("rel", "stylesheet");
+    list.setAttribute("type", "text/css");
+    list.setAttribute("href", '../../css/components/list/list.css');
+    document.getElementsByTagName("head")[0].appendChild(list);
+    let buttonsTwo = document.createElement('link');
+    buttonsTwo.setAttribute("rel", "stylesheet");
+    buttonsTwo.setAttribute("type", "text/css");
+    buttonsTwo.setAttribute("href", '../../css/components/buttons/buttons-two.css');
+    document.getElementsByTagName("head")[0].appendChild(buttonsTwo);
+    let actions = document.createElement('link');
+    actions.setAttribute("rel", "stylesheet");
+    actions.setAttribute("type", "text/css");
+    actions.setAttribute("href", '../../css/components/actions/actions.css');
+    document.getElementsByTagName("head")[0].appendChild(actions);
+  })
+</script>
